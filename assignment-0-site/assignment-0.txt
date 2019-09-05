@@ -1,0 +1,28 @@
+Definitions
+
+IDE- Integrated Developer Environment; software app that provides tools for programmers
+
+Cloud-computer system resources, primarily computing and data storage to be used without direct active user management
+
+AWS-Amazon Web Services; collection of cloud computing services provided by Amazon
+
+Cloud Service- any service made available made to users on demand via internet from the cloud computing provider's servers
+
+Bootstrap(Framework)-free and open source front end framework to build applications and programs from HTML, CSS, and Javascript.
+
+Terminal- hardware device that handles output and input of data-- linux based terminal; BASH shell command prompt
+
+Git- content management and tracking system created by the developer of Linux.
+
+Github- a company/website that hosts software development and version control using Git.
+
+
+Cloud9 is an IDE that is integrated on a cloud rather than on a machine. This makes it convenient to access from more than just one computer.
+
+
+IP address
+type into browser sends request, machine goes to find the ip address, get a collection of packets back, comes with a HEADER (header tells whether the server exists.)
+
+Server must authenticate IP address, does the server trust this IP address?
+
+http request is..? header is...?request process..?
