@@ -7,7 +7,7 @@ class Lexicon
     
     def scan(userwords)
         sentence = []
-        userwords.each do { |word|
+        userwords.each { |word|
         if word.include?("north","south", "east", "west")
             sentence.push(Pair.new(:direction, word))
         elsif word.include?("go", "stop","kill", "eat")

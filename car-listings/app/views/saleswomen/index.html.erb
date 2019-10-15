@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Salesmen</h1>
+
+<table class="table table-striped table-hover table-responsive">
+  <thead>
+    
+    <tr>
+      <th class="d-block">Full Profile</th>
+      <th class="d-block">Full name</th>
+      <th class="d-block">Description</th>
+      <th class="d-block">Profile image url</th>
+      <th class="d-block">Options</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @saleswomen.each do |saleswoman| %>
+      <tr>
+        <td class="d-block d-sm-none">
+          <img src="<%= saleswoman.profile_image_url %>" height="200"/>
+          <label>Full Name</label>
+          <h3 style="font-size: 12px;"><%= saleswoman.fullname %></h3>
+          <label>Description</label>
+          <p style="font-size: 10px;"><%= saleswoman.description %></p>
+        </td>
+        <td class="d-none d-sm-block d-md-block"><%= saleswoman.fullname %></td>
+        <td  class="d-none d-sm-block"><%= saleswoman.description %></td>
+        <td  class="d-none d-sm-block"><img src="<%= saleswoman.profile_image_url %>" height="200"/></td>
+        <td  class="d-none d-sm-block">
+          <%= link_to 'Show', saleswoman %><br/>
+          <%= link_to 'Edit', edit_saleswoman_path(saleswoman) %><br/>
+          <%= link_to 'Destroy', saleswoman, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Salesman', new_saleswoman_path %>

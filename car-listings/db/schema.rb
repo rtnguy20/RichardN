@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190924190013) do
+ActiveRecord::Schema.define(version: 20191015182442) do
+
+  create_table "car_infos", force: :cascade do |t|
+    t.string   "model"
+    t.string   "year"
+    t.string   "condition"
+    t.string   "location_address"
+    t.string   "location_city"
+    t.string   "location_state"
+    t.string   "location_zip"
+    t.float    "price"
+    t.string   "status"
+    t.string   "sold_by"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
 
   create_table "cars", force: :cascade do |t|
     t.string   "model"
@@ -23,3 +38,44 @@ ActiveRecord::Schema.define(version: 20190924190013) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "dealerships", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "owner"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "prospects", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email_address"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "mobile_phone_number"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  create_table "salesmen", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email_address"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "saleswomen", force: :cascade do |t|
+    t.string   "fullname"
+    t.text     "description"
+    t.string   "profile_image_url"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+end
